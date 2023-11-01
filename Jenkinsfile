@@ -20,7 +20,7 @@ pipeline {
     }
     stage ('Deploy to Tomcat') {
       steps {
-        sh 'sshpass -p "jenkins" scp -o StrictHostKeyChecking=no target/*.war mouad@192.168.26.135:/home/mouad/Desktop/apache-tomcat-9.0.80/webapps'
+        sh 'sshpass -p "jenkins" scp -o StrictHostKeyChecking=no target/*.jar mouad@192.168.26.135:/home/mouad/Desktop/apache-tomcat-9.0.80/webapps'
       }
     }
   
